@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>欢迎登录</title>
+        <style>
+            #login_form {
+                margin: 160px 500px;
+            }
+            #login_buttun {
+                height: 30px;
+                padding: 0 5px;
+                margin: 10px 50px;
+            }
+            input {
+                height: 25px;
+                /* padding: 0 5px; */
+                margin-top: 5px;
+            }
+            #send_sms_code {
+                margin-left: 5px;
+                height: 30px;
+                padding: 0 5px;
+            }
+        </style>
+        <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+    </head>
+    <body>
+        <div id="login_form">
+            <form accept="/login" method="POST">
+                <table>
+                    <tr><td>用户名: </td><td><input type="text" id="uname" name="uname" placeholder="用户名" autofocus></td></tr>
+                    <tr><td>密码: </td><td><input type="password" id="upass" name="upass" placeholder="密码"></td></tr>
+                    <tr><td></td><td><button type="submit" id="login_buttun">登录</button></td></tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
